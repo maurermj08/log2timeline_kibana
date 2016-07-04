@@ -48,7 +48,7 @@ def _EventToDict(event_object, image_id, image_path, output_mediator, doc_type, 
   ret_dict = event_object.GetValues()
 
   # Perform additional parsing to allow for more data analysis options
-  if 'filename' in ret_dict:
+  if u'filename' in ret_dict:
     ret_dict['name'] = os.path.basename(ret_dict['filename'])
     ret_dict['ext'] = os.path.splitext(ret_dict['name'])[1][1:].lower() or ""
     ret_dict['dir'] = os.path.dirname(ret_dict['filename']) + '/'
